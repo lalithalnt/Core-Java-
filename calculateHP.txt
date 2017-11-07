@@ -1,0 +1,34 @@
+base premium<18=5000
+gomes age=34
+gomes@17=5000
+
+after 5 years 17+5=22
+gomes@22=5000*10/100=500
+i.e 5000+500=5500
+
+after 5 years 22+5=27
+gomes@27=5500*10/100=550
+i.e 5500+550=6050
+
+after 5 ears 27+5=32
+gomes@32=6050*10/100=605
+i.e 6050+605=6655
+
+now base premium for gomes=6655
+male=6655*2/100=133.1
+total=6655+133.1=6788.1
+
+overweight yes s0 increase 1%
+overweight=6788.1*1/100=67.881
+so total Health insurance premium is
+6788.1+67.881=6855.981(6856)
+
+for good habits reduce 3%
+exercise(good habit)=6856*0.03=207
+total=6856-207=6649
+
+6856
+
+for bad habits increase 3%
+alcohol(bad habit)=6649*0.03=199.47
+total=6650.32+199.5096=6849.8296
