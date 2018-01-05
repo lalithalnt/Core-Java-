@@ -1,0 +1,243 @@
+
+===================================
+Date:05/01/2018(Friday) : CCW Quoting Day11 KT10
+===================================
+Meeting Recording:
+Play recording (1 hr 36 min 8 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=461cca8baa8f4dc3bfda1c4f815d4f2f
+Recording password: CdBwXpp2
+ 
+Tasks:
+1.I have attached queries for Pricing details displayed in Change Subscription UI (ATO SKU.xlsx and Minor SKU.xlsx).
+Get the Subscription  pricing queries for regular deal and compare the two.
+===================================
+Date:04/01/2018(Thursday) : CCW Quoting Day11 KT10(Revision KT)
+===================================
+Play recording (1 hr 35 min 37 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=a63c3c5af3be401a82cdd02ebf7e2798
+
+Recording password: jWBSTpb8
+
+===================================
+Date:03/01/2018(Wednesday) : CCW Quoting Day10 KT9
+===================================
+Today’s Tasks:
+1.       Create a flowchart detailing the “Forward to Discounts” logic.
+ 
+Meeting Recording:
+Play recording (46 min 58 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=b5043dfe3f0d4ab78c18f0e538da8f38
+Recording password: cKMHKyu6
+===================================
+Date:02/01/2018(Tuesday) : CCW Quoting Day9 KT8
+===================================
+
+Today’s Tasks:
+a.Find the source of “Unit Net Price Before Credits” and “Unit Net Price After Credits” fields in Discounts and Credits page. 
+	(Change the Item view to “Unit Net Price” to view these columns.
+b.Find the source of Total Discounts and Total Discount Amount for a Product and a Service.
+ 
+ 
+Meeting Recording:
+Play recording (57 min 38 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=82fe51bf00504a59ad26c54c933f4e0a
+Recording password: 8mY6p9Me
+
+==================================
+Date:28/12/2017(Thursday) : CCW Quoting Day8
+==================================
+Today’s Tasks:
+1.       Replicate a prod deal (URL given below) as-is on all pages. Proxy with the Deal creator of the prod deal. Also, refer CQ_AUDIT_HISTORY table.
+2.       Get List To Net Price service request and response for the deal created above.
+3.       To get familiar with BE tables, please generate queries for the below
+a.       All Disti fulfilled Partner created NS standards deals for last one month
+b.       AM created standard deals which are in Approved status.
+  
+Also, PFA the list of Quoting UI features for your reference (for the type of User and whether Quote or a Deal).
+ 
+Prod Deal URL: https://apps.cisco.com/ICW/PDR/home.do?flow=nextgen&actionType=viewFromUrl&dealId=4712087081&qID=4717051386&typeOfDeal=3
+Credentials: your Credentials
+
+Please use this URL:
+               https://apps.cisco.com/ICW/PDR/home.do?flow=nextgen&actionType=viewFromUrl&dealId=4709392313&qID=4713850378&typeOfDeal=5
+
+connect to XXAPPSRO
+identified by "TPEu4F_7M"
+using 'DMPROD_RO'
+
+try to replicate this deal
+
+       https://apps.cisco.com/ICW/PDR/home.do?flow=nextgen&actionType=viewFromUrl&dealId=4712096087&qID=4717062029&typeOfDeal=2   
+
+===============================================
+Date:27/12/2017(Wednesday) : CCW Quoting Day7 KT7
+===============================================
+Today’s Tasks:
+1.       Initiate a change subscription
+2.       Get familiar with Web service
+3.       Get familiar with BE tables
+ 
+Subscription URL: https://ccrc-sc-stg.cisco.com/subscriptions-main/landing/?
+Credentials: imdisti/ cisco123
+	To access this subscription url remove the proxy from network proxy settings
+i.e., *.cisco.com
+
+ 
+Quoting Direct URL: https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/home.do
+Credential: Password is cisco123
+      Partner: smadick, emily-culp, jgose
+      Disti: imdisti, techdata
+      Reseller: d.lake
+      AM: thaymore, annkaise
+ 
+ 
+Kibana URL: http://quoting-esweb-stg1
+-----------------------------------
+Credentials for kibana and MDM :
+-----------------------------------
+	usetname : srajann2
+	password : Skandha,168
+
+PFB the credentials for TS1DMP
+connect to XXAPPSRO
+identified by "R3ad_0nly"
+using 'TS3DMP'
+
+Meeting Recording:
+Play recording (1 hr 26 min 49 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=a4e61e40334b4ca3a4c885254a3ec736
+Recording password: 6kPyUppc
+
+
+===============================================
+Date:26/12/2017(Tuesday) : CCW Quoting Day6 KT6
+===============================================
+Credentials for Parter,Distributor,Reseller,AM
+(pwd for all these:cisco123)
+Partner:
+smadick, emily-culp, jgose
+
+Re-seller:
+d.lake
+
+Distis:
+imdisti, techdata
+
+AMs:
+thaymore, annkaise
+
+ 
+
+Play recording (42 min 47 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=c6dd678097ad4f019c83ac19ea231b3e
+
+Recording password: Py6JJwJK
+
+Quote(proxy url)
+Proxy URL: https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/proxyHome.do
+
+Direct URL
+Direct URL: https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/home.do
+
+
+===============================================
+Date:22/12/2017(Friday) : CCW Quoting Day5 KT5
+===============================================
+Meeting Recording:
+Play recording (39 min 8 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=921a90489d1846999a2e950a16abc7c2
+Recording password: GjuZfJP2
+
+Today’s Tasks:
+1.       Create a deal with multi-quote scenario
+2.       Add the below subscription items and configure them
+a.       A-wx-ports
+b.       A-wx-named-user
+c.       A-spk-named-user
+d.       A-wx-active-user
+e.       A-wx-emp-count
+3.       Explore MDM application
+ 
+
+MDM URL: http://mdmui-cstg.cloudapps.cisco.com/mdmui/rest/proxyHome
+Proxy User: duabhish
+
+You can also try to create an RNSD and attach it to a standard deal. PFB the steps to follow
+a.       Create an RNSD using AM login in SFDC
+b.       Add either Items or Product Families
+c.       Give the discounts and get the RNSD approved
+d.       Make sure the RNSD Quote status is in Approved status
+e.       Create a Partner Deal with same price list as RNSD
+f.        Add the same items added to RNSD or items belonging to the product family.
+g.       Attach the RNSD
+h.       Verify that RNSD approved discounts gets attached to Partner deal also.
+
+
+
+================================================
+Date:21/12/2017(Thursday) : CCW Quoting Day4 KT4
+================================================
+Meeting Recording:
+
+Play recording (50 min 8 sec) :https://cisco.webex.com/ciscosales/lsr.php?RCID=40eecb0c39ee421e80d44164a7104858
+
+Recording password: sEYEeTC3
+
+Today’s Tasks:
+
+1.Create an opportunity in SFDC
+
+2.Try to configure an invalid item (Ex: UCS-EPNM-C220M4S)
+
+3.Create an RNSD and try to attach this deal to a Partner created deal. Check if the approved NS discounts are applied to Partner created deal also.
+******************************
+SFDC URL: test.salesforce.com
+*******************************
+
+Login Creds: thaymore@cisco.com.reg / cisco123
+==================================================
+Date:20/12/2017(wednesday) : CCW Quoting Day3 KT3
+==================================================
+Meeting Recording:
+Play recording (54min 43 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=373844192cca4c9ebaa26eb1ffdce8d9
+Recording password: PmJJg2Ac
+
+Today’s Tasks:
+1.       Create a Standard Deal using Partner login. Convert it to Non-Standard using AM login
+2.       Create a 2-Tier deal using reseller login and view the pricing details by logging in as a distributor.
+ 
+ 
+Reseller User: jgose
+Distributor User: imdisti
+ 
+
+===============================================
+Date:19/12/2017(Tuesday) : CCW Quoting Day2 KT2
+===============================================
+
+PFB the Login details for Deal/ Quote creation.
+ 
+Proxy URL: https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/proxyHome.do
+Login Credentials: sunchand/cisco123 (Username/ pwd)
+ 
+Proxy as “smadick” (Partner login)
+
+Item Examples:
+Products: Items starting with “ucs”
+Services: Items starting with “con”
+ 
+Today’s Tasks:
+1.       Create a deal or a quote using partner login
+2.       Re-Open the deal using AM login and copare the differences between Parter and AM flow.
+ 
+ 
+Meeting Recording:
+Play recording (1 hr 0 min 58 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=8913cbaed84a4793b449021c34757be8
+Recording password: PyHSFn2P
+ 
+==================================================
+ Date:18/12/2017(Monday) : 	CCW Quoting Day1 KT1
+==================================================
+
+
+Play recording (44 min 31 sec) : https://cisco.webex.com/ciscosales/lsr.php?RCID=abd17f49a2214ef2818f133eb6a17a8e
+Recording password: kFBhXWy3
+
+URLs
+Proxy: https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/proxyHome.do
+ 
+Loggin as sunchand/ cisco123 (Username/ pwd)
+Proxy as “smadick”
