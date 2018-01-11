@@ -1,0 +1,98 @@
+CCW Quoting Day1 KT1
+
+1.CCW -cisco commerce workspace
+--Its like a web portal to order cisco products(like Amazon)
+--End customers can't do it
+--only internal users i.e., specific users can login and order it
+
+2.Quoting
+--Internal user will create a quote and there will be some base discount on those products
+if End-Customer comes and asks us a cisco product.he can order on top of that quote
+--quote mainly contains a product
+--They are called SKU's or items and in technical terms we call it as "Quote Lines"
+--In CCW quote is a part of CCW
+--There are many modules in CCW.They are
+	a.quoting
+	b.ordering
+	c.Configuration
+	(config team will take care of configuring the items for a particular product)
+	(pricing team will take care about the discounts,list price etc whenevr we try to add item
+	
+--unit list price---ex:a mobile with MRP price(10,000)---"Unit List Price is 10,000/-"
+--Extended List price--10 mobiles*List price(10*10,000)=1,00,000---"Extended List Price is 1,00,000/-"
+--If we apply some base discount on that product then calculate that product price with discount--that is called "Unit Net Price"
+and "Extended Net Price" also same like that
+*unit list price is just for 1 quantity
+*extended list price is for all 10 units
+--So flow will be like "Quoting--Config--order
+		config and pricing--we will get inforamtion about items and prices form config and pricing
+		quoting-from quoting we create an order(based on this quoting we create an order)
+
+Overview
+1.login to the CCW
+2.while quoting ,while adding items data cum config cum pricing 
+3.after we submit the quote
+4.we can order on top of the quote 
+		
+Proxy: https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/proxyHome.do
+ 
+Loggin as sunchand/ cisco123 (Username/ pwd)
+Proxy as “smadick”--partner
+
+There are some fixed users who are authorized to login into CCW.They are 3 types of users
+1.Partner
+2.Distributor(disti)	
+3.Re-sellers
+
+1-tier flow:
+cisco-->partner(middleman)-->End-Customer================= "1-tier flow" ---quote will be fulfilled by "cisco"---cisco fullfillment
+--partner gets items from cisco and sells the product to End-Customer
+--later partner sends invoice to cisco i.e watevr billing is there from End-Customer partner will sends it to cisco
+--cisco will not be involved in billing and all
+--since we have one middleman here its called "1-tier flow"
+2-tier flow:
+cisco-->Disti-->Partner-->End-Customer==============  "2-tier flow"--quote will be fulfilled by "disti"--disti fullfillment
+--cisco can't have warehouses everywhere so distributors will have warehouses,they will buy products from cisco and stock them in
+warehouses
+--And the partners,not only from cisco but they can buy products from distis also 
+
+3.Re-sellers:
+Cisco-->Disti-->Re-sellers-->End-Customer==========="2-tier flow"
+--there is no much difference between partner and reseller,the only thing is reseller can't directly buy product from cisco
+--bcoz resellers will have small shops they directly sell products to end-customers
+--where cisco cant directly can't reach out to end-customers 
+
+Note:
+
+--when comes to partner,there are 2 ways
+1.when partner buys product from cisco it is "1-tier flow"
+2.when partner buys product from disti it is "2-tier flow"
+
+====================
+Creating the quotes
+=====================
+1.partner can create the quote either by 1-tier flow or 2-tier flow
+2.disti can create the quote but when disti creates quote he has to mention the partner bcoz he cant sell the product directly to end-customers
+so agin it is "2-tier flow"
+3.There is another type of user called "AM(Account Manager)"
+	--these partners,distis,reseelres are all not part of cisco
+	--but these AM's are cisco employees(cisco team),they can also create quotes and sell directly to end-customers(again it is "1-tier flow")
+	--but the main difference is that they have more previlages and more functions that are enable for AM's
+	
+	
+=============
+In CCW
+=============
+--Another terminology that we use in CCW is "Deals And Quotes"	
+--Deal is a wrapper around the quote
+
+		--suppose we are introducing a product into a particular region,
+		--to promote that product in that region only, we will give some incentives and special discounts for that region only
+		--so if u want to have that special discouts in that particular region only,we create a Deal
+		--there will be 2 to 3 pages extra before quote creation
+		--Its like a wrapper.there is no difference between deal and quote
+		--incentives and questionaire will not be there for quote(for deal it will be there)
+		--partner if it is 2-tier(i.e using disti)cant able to determine the price.so distributor must determine the price i.e., the one (partner)
+		who is creating the quote will not be able to pay it
+		---this is basically a "Re-seller"
+		---so disti has to login into CCW and add the discounts and determine the price

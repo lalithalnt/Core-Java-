@@ -1,0 +1,91 @@
+https://repo-svn.cisco.com/svn/CiscoMain/IT/CVC/FinanceandEmployeeServices/capital/crp/branches/RC_SPRINT15
+
+
+bgl-gem-auth.cisco.com/netaccess/loginuser.html
+dev link    https://refreshcentral-dev.cloudapps.cisco.com/#/  
+
+Window->Preferences->Team->SVN->SVN Connector.
+
+laptop case -INC800007380643
+
+deploy/
+
+mailer.cisco.com > search for iodc-it-crp-offshore  > subscribe
+
+unix server access to cscapp-dev-03 and cscapp-stg-03
+
+Database names are FNTR2DEV, FNTR2STG, FNTR2PRD 
+(ONRamp > EMAN > SOX > Cisco AppDB > Logical Database > FNTR2 > RefreshCentral > appdb-db-fntr2-crp-developer)
+ 	
+SVN Commit Access crpusers
+
+mail to rally-ciscoit-admin(mailer list) for rally access
+
+jenkins > mailer.cisco.com > search for jenkins_ci3_mailer > subscribe
+
+QA access for uRelease > search for CapitalPOEQAApprovers > apply membership
+
+
+
+
+Softwares
+apache-maven-3.5.0-bin
+eclipse-jee-neon-2-win32-x86_64
+eStore_Software_Downloader_1.13.124.0.exe
+ojdbc6.jar
+TortoiseSVN-1.9.7.27907-x64-svn-1.9.7.msi
+npp.7.5.1.Installer.exe
+
+
+
+
+TOAD 12 : 
+Authrization Key : 0-75204-11575-07370-89287
+Site : CISCO SYSTEMS INC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+have we used $text query operator in our code??
+
+
+com.mongodb.MongoQueryException: Query failed with error code 17287 and error message 'Can't canonicalize query: BadValue bad skip value in query' on server localhost:27017
+	at com.mongodb.connection.ProtocolHelper.getQueryFailureException(ProtocolHelper.java:131)
+	at com.mongodb.connection.QueryProtocol.execute(QueryProtocol.java:295)
+	at com.mongodb.connection.QueryProtocol.execute(QueryProtocol.java:54)
+	at com.mongodb.connection.DefaultServer$DefaultServerProtocolExecutor.execute(DefaultServer.java:168)
+	at com.mongodb.connection.DefaultServerConnection.executeProtocol(DefaultServerConnection.java:289)
+	at com.mongodb.connection.DefaultServerConnection.query(DefaultServerConnection.java:212)
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:525)
+	at com.mongodb.operation.FindOperation$1.call(FindOperation.java:510)
+	at com.mongodb.operation.OperationHelper.withConnectionSource(OperationHelper.java:431)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:404)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:510)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:81)
+	at com.mongodb.Mongo.execute(Mongo.java:836)
+	at com.mongodb.Mongo$2.execute(Mongo.java:823)
+	at com.mongodb.OperationIterable.iterator(OperationIterable.java:47)
+	at com.mongodb.FindIterableImpl.iterator(FindIterableImpl.java:151)
+	at com.cisco.spring.mongodb.poc.util.BlockPIDDAOImpl.getBlockPIDs(BlockPIDDAOImpl.java:1046)
+	at com.cisco.spring.mongodb.poc.util.BlockPIDDAOImpl.getBlockPIDDetails(BlockPIDDAOImpl.java:938)
+	at com.cisco.spring.mongodb.poc.util.BlockPIDDAOImpl.main(BlockPIDDAOImpl.java:78)
+[main] INFO org.mongodb.driver.connection - Closed connection [connectionId{localValue:2, serverValue:5}] to localhost:27017 because the pool has been closed.

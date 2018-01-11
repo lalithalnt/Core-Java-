@@ -1,0 +1,102 @@
+PFB some standard queries.
+
+ 
+
+Deal Details:
+
+select * from CQ_DEAL
+
+where opty_number='62008365' -- deal_id
+
+ 
+
+Quoting LOVs:
+
+select * from CQ_LOV where lov_type='DEAL_TYPE'
+
+ 
+
+ 
+
+Deal and Quote details:
+
+select * from cq_deal d, cq_quote q
+
+where d.object_id=q.deal_object_id
+
+and opty_number='62008365'
+
+ 
+
+select * from cq_ccw_all_deal
+
+ 
+
+ 
+
+Quote Line Details:
+
+select * from cq_quote_line where quote_object_id=4713327609 and active=1
+
+ 
+
+Subscription Details:
+
+SELECT *
+
+  FROM cq_quote_line_extn
+
+WHERE quote_line_object_id IN (SELECT object_id
+
+                                  FROM cq_quote_line
+
+                                 WHERE     quote_object_id = 4713327609
+
+                                       AND active = 1)
+
+ 
+
+ 
+
+Production URL:
+
+SELECT deal.object_id, quote_id, deal_type,'https://apps.cisco.com/ICW/PDR/home.do?flow=nextgen'||'&'||'actionType=viewFromUrl'||'&'||'dealId='||deal.object_id||'&'||'qID='||quote.object_id||'&'||'typeOfDeal='||deal_type ccw_url
+
+  FROM cq_deal deal, cq_quote quote
+
+WHERE --opty_number = '23786690'
+
+deal.object_id=4712096087
+
+AND deal_object_id = deal.object_id
+
+ 
+
+ 
+
+select * from cq_quote q, cq_deal d
+
+where 1=1
+
+and d.object_id=q.deal_object_id
+
+and FULFILLMENT_TYPE='2-Tier'
+
+and d.deal_type=5
+
+and d.created_on > sysdate-30
+
+
+ 
+
+ select * from cq_quote q, cq_deal d
+
+where 1=1
+
+and d.object_id=q.deal_object_id
+
+and deal_type=1
+
+and quote_status=13
+
+ 

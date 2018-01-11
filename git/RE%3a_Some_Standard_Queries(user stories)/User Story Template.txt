@@ -1,0 +1,26 @@
+Req: Partner should also be able to add some credit
+
+
+User Story Name/ Header: Capability for Partner to add Adjustments on a Deal.
+
+Actors: Partner
+
+Assumptions and Key callouts:
+1. When Partner add credits, the Deal converted into NS and goes to MDM for approval
+
+Pre-requisite:
+1. Partner should create a Deal/ Quote and navigate to Discounts Page.
+
+Description:
+
+AS-IS:
+1. Partner has no capability to add credits
+2. Only AM can add credits
+
+
+TO-BE:
+1. Partner should also have the capability to add credits.
+
+
+Acceptance Criteria:
+1. Partner should be able to add credits in Discounts and Credits page.

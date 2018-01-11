@@ -1,0 +1,121 @@
+package com.cisco.capital.crp.controller;
+
+import java.sql.Connection;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
+
+import com.cisco.capital.crp.cepmService.caller.CepmRestCaller;
+import com.cisco.capital.crp.cepmService.caller.CepmRestRolesCaller;
+import com.cisco.capital.crp.common.utils.CommonUtils;
+import com.cisco.capital.crp.common.utils.RCUtil;
+import com.cisco.capital.crp.constants.RCConstants;
+import com.cisco.capital.crp.dto.CRPError;
+import com.cisco.capital.crp.model.MainMenuModel;
+import com.cisco.capital.crp.service.CEPMTabsService;
+import com.cisco.capital.excess.customer.service.ExcessCustomerService;
+import com.cisco.capital.excess.customer.util.ECContsantsUtil;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+@Path("/cepmAuth")
+@Component
+@JsonSerialize
+public class InitialPropertiesController {
+	/* To get the Logger instance */
+	private final static Logger LOGGER = Logger.getLogger(InitialPropertiesController.class);
+	private String authUser = "AUTH_USER";
+
+	@GET
+	@Path("/login")
+	@Produces(MediaType.APPLICATION_JSON)
+	public MainMenuModel start(@Context HttpServletRequest request, @Context HttpServletResponse resp) {
+
+		String userId = "drani";
+
+		HttpSession session = request.getSession();
+		session.setAttribute("userId", userId);
+
+		LOGGER.info("logged in user is ::: " + userId);
+
+		MainMenuModel finalMenu = null;
+		// call to method where menus are being set
+		try {
+			List<String> accessObject = getCEPMPropertiesSet(userId, request);
+
+			finalMenu = CEPMTabsService.setTabsInHomePage(accessObject, request);
+
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+			new RCExceptionController().saveExceptionDetails(e, request);
+			finalMenu = new MainMenuModel();
+			CRPError er = new CRPError();
+			er.setErrorCode("RC-CEPM");
+			er.setErrorMessage(RCConstants.SYSTEM_ERROR);
+			er.setStatus("FAILURE");
+			finalMenu.setCrpError(er);
+		}
+		return finalMenu;
+	}
+
+	@GET
+	@Path("/testDB")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Boolean testDBConnection() {
+
+		Boolean ping = true;
+		Connection conn = null;
+		try {
+			conn = CommonUtils.getConnectionToCRPADM();
+			if (conn == null) {
+				ping = false;
+			}
+		} catch (Exception e) {
+			LOGGER.error("Error while connecting to data base ", e);
+			ping = false;
+		} finally {
+			RCUtil.closeResource(conn);
+		}
+		return ping;
+	}
+
+	public List<String> getCEPMPropertiesSet(String userId, HttpServletRequest request) throws Exception {
+
+		String cepmUrl = "";
+		String userpass = "";
+
+		String serverName = request.getServerName();
+		/*if (serverName.contains("dev") || serverName.contains("stage") || serverName.contains("stg") || serverName.contains("lt")
+				|| serverName.contains("localhost")) {
+
+			cepmUrl = "https://wsgx-stage.cisco.com/cepm/pdpservices/authorizationmanagerservice";
+			userpass = "Cepm-crp.gen:H8B3$bslz";
+			LOGGER.info("CEPM url pointing to CEPM STAGE");
+		} else { */
+
+			cepmUrl = "https://wsgx.cisco.com/cepm/pdpservices/authorizationmanagerservice";
+			userpass = "cepm-crp.gen:L9T4$qbls";
+			LOGGER.info("CEPM url pointing to CEPM PROD");
+		//}
+		new CepmRestRolesCaller().getRolesFromCEPM(userId, cepmUrl, userpass, request);
+		List<String> accessObject = new CepmRestCaller().getDecisionsFromCEPM(userId, cepmUrl, userpass, request);
+
+		if (request.getSession().getAttribute(ECContsantsUtil.CONFIG_MAP) == null) {
+			new ExcessCustomerService().getConfigDetails(request.getSession());
+			// new
+			// ExcessCustomerController().getConfigDetails(configMap,request);
+		}
+
+		return accessObject;
+
+	}
+}

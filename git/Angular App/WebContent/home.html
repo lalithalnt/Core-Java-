@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+<meta charset="ISO-8859-1">
+<title>User Registration Form</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+		</script>
+	
+		<style type="text/css">
+		.container{
+		margin-top:40px;
+		
+		}
+		.container-fluid{
+		background-color: steelblue;
+		}
+		h3{
+		color:white;
+		}
+		#msg{
+		color:red;
+		font-size:20px;
+		}
+		</style>
+		<script>
+		var app=angular.module("myapp",[]);
+		app.controller("ctrl",function($scope){
+			//alert("Iam working");
+			$("#submit").click(function(){
+				//alert("Iam also working");
+			
+					var fullname=$("#fname").val();
+					var email=$("#email").val();
+					var phone=$("#phone").val();
+					var address=$("#address").val();
+					var gendor=$("#gendormale").val();
+					var gendor=$("#gendorfemale").val();
+					var nationality=$("#nationality").val();
+					var uname=$("#uname").val();
+					var password=$("#password").val();
+					
+					//serialize() method will read all form data and puts/stores in "dataString" variable
+					var dataString=$("#myform").serialize();
+					if(fullname=='' || email=='' || phone=='' || address=='' || gendor=='' || nationality=='')
+					//alert("Fill all the fields");
+					{
+						$("#msg").html("Please enter all the details");
+					}
+					else
+						{
+						
+						
+						 $.ajax({
+							type :'POST',
+							url:'http://localhost:8085/Angular_App/webservice/savedetails.jsp',
+							data:dataString,
+							cache:false,
+							success:function(response){
+								$("#msg").html(response);
+								//we need to empty the form as soon as it submitted by the user
+								//for that we need to make all form data null " "as follows
+								var fullname=$("#fname").val("");
+								var email=$("#email").val("");
+								var phone=$("#phone").val("");
+								var address=$("#address").val("");
+								var gendor=$("#gendormale").val("");
+								var gendor=$("#gendorfemale").val("");
+								var nationality=$("#nationality").val("");
+								var subscribe=$("#subscribe").val("");
+								var uname=$("#uname").val("");
+								var password=$("#password").val("");
+								
+							}
+							
+						}); 
+						}
+					
+			});
+			
+		});
+	
+		</script>
+</head>
+
+<body ng-controller="ctrl">
+<div class="container">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<h3>User Registration Form</h3>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<form class="form-horizontal" id="myform" name="myform">
+			<fieldset>
+				<legend>User Form</legend>
+				<div class="form-group">
+					<div class="col-lg-4 col-lg-offset-2">
+						<span id="msg"></span>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="fname" class="col-lg-2 control-label">Full Name</label>
+					<div class="col-lg-4">
+					<input type="text" class="form-control" name="fullname" id="fname" placeholder="Full Name">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="email" class="col-lg-2 control-label">Email Address</label>
+					<div class="col-lg-4">
+					<input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="phone" class="col-lg-2 control-label">Mobile Number</label>
+					<div class="col-lg-4">
+					<input type="text" class="form-control" name="phone" id="phone" placeholder="Mobile Number">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="address" class="col-lg-2 control-label">Address</label>
+					<div class="col-lg-4">
+					<textarea class="form-control" name="address" id="address" rows="3" placeholder="Address"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="gendor" class="col-md-2 control-label">Gendor</label>
+					<div class="col-lg-4">
+						<div class="radio">
+							<label>
+							<div class="col-md-1"></div>
+								<input type="radio" name="gendor" id="gendormale" value="Male">Male
+							</lable>
+						</div>
+						<div class="radio">
+							<label>
+							<div class="col-md-1"></div>
+								<input type="radio" name="gendor" id="gendorfemale" value="Female">Female
+							</lable>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="nation" class="col-lg-2 control-label">Nationality</label>
+					<div class="col-lg-4">
+						<select class="form-control" name="nationality" id="nationality">
+							<option>Select</option>
+							<option>India</option>
+							<option>Australia</option>
+							<option>USA</option>
+							
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="uname" class="col-lg-2 control-label">User Name</label>
+					<div class="col-lg-4">
+					<input type="text" class="form-control" name="uname" id="uname" ng-model="uname" placeholder="User Name">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="password" class="col-lg-2 control-label">Password</label>
+					<div class="col-lg-4">
+					<input type="password" class="form-control" name="password" id="password" ng-model="pwd" placeholder="Password">
+				<!-- 	<div class="checkbox">
+						<label>
+						<input type="checkbox" id="subscribe" name="subscribe"> subscribe
+						</label>
+					</div>			 -->	
+					</div>
+				</div>
+			
+				<div class="form-group">
+					<div class="col-lg-4 col-lg-offset-2">
+						<button type="submit" id="submit" name="submit" class="btn btn-primary">Submit</button>
+						<button type="reset" class="btn btn-primary">Cancel</button>
+					</div>
+				</div>
+				<div>
+				
+				</div>
+					
+		 </fieldset>
+		</form>
+	</div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+Creating order
+
+---partner login with direct or proxy url
+---But when creating order we need to access direct URL
+---Using partner login create a quote
+---After submitting quote if buy method is cisco i.e., 1-tier we can create an order using parner login with username and pwd in direct url
+	or if buy method is "disti" i.e., 2-tier we can create an order using disti login with username and pwd in direct url
+
+---Another way we can login as AM in SFDC and create opportunity
+---partner should be required 
+---if buy method is cisco i.e., 1-tier we can create an order using parner login with username and pwd in direct url
+	or if buy method is "disti" i.e., 2-tier we can create an order using disti login with username and pwd in direct url
+
+	
+	select * from cq_lov where lov_type like '%viewFromURL%'

@@ -1,0 +1,54 @@
+Topic : CCW Overview and Partner Flow				
+Date  : 18-Dec	
+URL   : https://cisco.webex.com/ciscosales/lsr.php?RCID=abd17f49a2214ef2818f133eb6a17a8e
+pwd   :	kFBhXWy3
+--------------------------------------------
+Topic  : CCW Overview and Partner Flow	
+Date   : 19-Dec	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=8913cbaed84a4793b449021c34757be8
+pwd    : PyHSFn2P
+--------------------------------------------
+Topic  : NS Flow and Reseller Flow	
+Date   : 20-Dec	Play recording	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=373844192cca4c9ebaa26eb1ffdce8d9
+pwd    : PmJJg2Ac
+--------------------------------------------
+Topic  : Opportunity and RNSD	
+Date   : 21-Dec	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=40eecb0c39ee421e80d44164a7104858
+pwd    : sEYEeTC3
+--------------------------------------------
+Topic  : MDM and Item Types	
+Date   : 22-Dec	Play recording	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=921a90489d1846999a2e950a16abc7c2
+pwd    : GjuZfJP2
+--------------------------------------------
+Topic  : Order Creation	
+Date   : 26-Dec	Play recording	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=c6dd678097ad4f019c83ac19ea231b3e
+pwd    : Py6JJwJK
+--------------------------------------------
+Topic  : Change Subsc/ WS/ BE Tables	
+Date   : 27-Dec	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=a4e61e40334b4ca3a4c885254a3ec736	 
+pwd    : 6kPyUppc
+--------------------------------------------
+Topic  : UI Flow - Angular JS	
+Date   : 2-Jan	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=82fe51bf00504a59ad26c54c933f4e0a
+pwd    : 8mY6p9Me 
+--------------------------------------------
+Topic  : UI Flow - Struts and Spring 	
+Date   : 3-Jan	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=b5043dfe3f0d4ab78c18f0e538da8f38
+pwd    : cKMHKyu6
+--------------------------------------------
+Topic  : Revision KT1	
+Date   : 4-Jan	
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=a63c3c5af3be401a82cdd02ebf7e2798
+pwd    : jWBSTpb8
+--------------------------------------------
+Topic  : Revision KT2	
+Date   : 5-Jan	(06:19)
+URL    : https://cisco.webex.com/ciscosales/lsr.php?RCID=461cca8baa8f4dc3bfda1c4f815d4f2f
+pwd    : CdBwXpp2

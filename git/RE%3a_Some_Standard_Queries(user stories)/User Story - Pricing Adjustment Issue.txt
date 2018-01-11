@@ -1,0 +1,110 @@
+1.	DESCRIPTION: Display correct Product/ Subscription/ Service Subtotal values for Top SKUs.
+		
+	Actors: All NGMDM Users.
+	   
+	Assumptions and Key Call Out:
+		1. This is applicable for all Deal Types (Transaction, GPN/ GPN Local, AM Global/ Local, RNSD, RNSD Global/ Local).
+		2. This will be applicable for new Deals created after Go Live.
+	
+	Pre-Requisite:
+		1. Deal is created and routed to MDM for Approval.
+		2. Deal contains Top and Sub SKUs
+	
+	Description: 
+		
+		As Is:
+			Currently, in the Deal Pricing Grids, we are displaying values for Ext.List Price Additional Credits, Purchase Adjustment, Trade-In Credits, Unit Net Price and Ext. Net Price columns. These values are not considered in the Subtotal calculations for Top SKUs.
+
+			PFA the screenhot_as-is_1.
+
+			This creates a descripency when we add all the line level values for the above columns and compare it with the Subtotal value.
+
+		To Be:
+			The values for the below columns,
+				Ext. List Price
+				Additional Credits
+				Purchase Adjustment
+				Trade-In Credits
+				Unit Net Price 
+				Ext. Net Price
+			should be updated as 0.00 for Product/ Subscription/ Service Top SKUs in their respective grids.
+
+			PFA the screenhot_to-be_1.
+
+	Acceptance Criteria:
+		NGMDM User should be able to see 0.00 value for Top SKUs for the below columns
+			Ext. List Price
+			Additinal Credits
+			Purchase Adjustment
+			Trade-In Credits
+			Unit Net Price 
+			Ext. Net Price.
+	
+
+2.  DESCRIPTION: Only external adjustments added on the deal should be displayed in the Total Adjustments field.
+
+	    Actors: All NGMDM Users.
+	   
+	    Assumptions and Key Call Out:
+			1. This is applicable for all Deal Types (Transaction, GPN/ GPN Local, AM Global/ Local, RNSD, RNSD Global/ Local).
+			2. This will be applicable for new Deals created after Go Live.
+
+	    Pre-Requisite:
+			1. Deal is created and routed to MDM for Approval.
+			2. Deal contains Top and Sub SKUs
+		
+        Description: 
+			Total Product/ Subscription/ Service Adjustments field should only display external adjustments applied on the deal (i.e. adjustments applied on the line level should be excluded).
+		
+		As Is:
+			Currently, the value for Total Adjustments is populated from Adjustment Pricing grid. Adjustments which are applied at line level and have a record in Adjustment Pricing grid are also displayed. These adjustments are not substracted from Subtotal, as these adjsutments are already applied on the lines. 
+
+			PFA the screenhot_as-is_2.
+
+		To Be:
+			Adjustments which are applied at the line level will not be displayed for Total Adjustments. Only external adjustments applied on the deal should be used.
+			
+			PFA the screenhot_to-be_2.
+
+
+		Acceptance Criteria:
+			1. Adjustments already applied on the line level should not be included in the Total Adjustments field.
+
+
+3.  DESCRIPTION: Addition of new columns in Product, Subscription and Service Pricing Grids.
+
+	    Actors: All NGMDM Users.
+	   
+	    Assumptions and Key Call Out:
+			1. This is applicable for all Deal Types (Transaction, GPN/ GPN Local, AM Global/ Local, RNSD, RNSD Global/ Local).
+	
+	    Pre-Requisite:
+			1. Deal is created and routed to MDM for Approval.
+		
+		Description: 
+			1. Product and Subscription Pricing grids.
+
+			As Is:
+				Currently, only Service Pricing Grid has "Rebate Amount"
+			
+			To Be:
+				"Rebate Amount" column should be added to Product and Subscription Pricing grids.
+
+				PFA the screenhot_to-be_3.
+
+			2. Service Pricing grid.
+			
+			As Is:
+				Service Pricing grid does not have Additional Credits, Purchase Adjustment and Trade-In Credits.
+			
+			To Be:
+				Add the above mentioned 3 columns in Service Pricing grid.
+	   
+				PFA the screenhot_to-be_4.
+
+	    Acceptance Criteria:
+			1. Service Pricing grid should have three additinal columns added.
+				Additional Credits
+				Purchase Adjustment
+				Trade-In Credits
+			2. "Rebate Amount" column should be added to Product and Subscription Pricing grids.

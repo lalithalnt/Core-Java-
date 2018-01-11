@@ -1,0 +1,93 @@
+===========
+Proxy URL: 
+===========
+
+https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/proxyHome.do
+Login Credentials: sunchand/cisco123 (Username/ pwd)
+
+Proxy as “smadick” (Partner login)
+Reseller User: jgose
+Distributor User: imdisti
+
+==========
+SFDC URL: 
+==========
+test.salesforce.com
+Login Creds: thaymore@cisco.com.reg / cisco123
+
+=========
+MDM URL: 
+=========
+http://mdmui-cstg.cloudapps.cisco.com/mdmui/rest/proxyHome
+Proxy User: duabhish
+
+=================
+Quote(proxy url)
+=================
+https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/proxyHome.do
+
+
+===========
+Direct URL
+===========
+https://pdricw-cstg.cloudapps.cisco.com/ICW/PDR/home.do
+
+============
+Credentials
+============
+Credentials for Parter,Distributor,Reseller,AM
+(pwd for all these:cisco123)
+
+Partner:
+smadick, emily-culp, jgose
+
+Re-seller:
+d.lake
+
+Distis:
+imdisti, techdata
+
+AMs:
+thaymore, annkaise
+
+==================
+Subscription URL: 
+==================
+
+https://ccrc-sc-stg.cisco.com/subscriptions-main/landing/?
+Credentials: imdisti/ cisco123
+
+To access this subscription url remove the proxy from network proxy settings
+i.e., *.cisco.com
+
+============
+Kibana URL:
+============
+http://quoting-esweb-stg1
+
+Credentials for kibana and MDM :
+
+	usetname : srajann2
+	password : Skandha,168
+	
+===============
+Prod Deal URL: 
+===============
+https://apps.cisco.com/ICW/PDR/home.do?flow=nextgen&actionType=viewFromUrl&dealId=4712087081&qID=4717051386&typeOfDeal=3
+Credentials: your Credentials	
+
+Please use this URL:
+https://apps.cisco.com/ICW/PDR/home.do?flow=nextgen&actionType=viewFromUrl&dealId=4709392313&qID=4713850378&typeOfDeal=5
+
+=====================
+DB Credentials (TOAD)
+=====================
+credentials for TS1DMP
+connect to XXAPPSRO
+identified by "R3ad_0nly"
+using 'TS3DMP'
+
+connect to XXAPPSRO
+identified by "TPEu4F_7M"
+using 'DMPROD_RO'
+

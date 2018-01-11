@@ -1,0 +1,22 @@
+now if we goto MDM
+http://mdmui-cstg.cloudapps.cisco.com/mdmui/rest/proxyHome
+Proxy User: duabhish
+
+only NS deals will be visible,it will be either of dealType=2 or dealType=5
+This is where we can directly approve it
+This option will be there only if we login as "Abhishek Dube(duabhish)
+he is super user
+
+we can have options like 
+1.edit deal
+2.executive summary
+3.If we clicl on dealId we can have more Information,it will show "scenario browser"
+In CCW we have quotes(Quote Number) for the deal,the same way in MDM for a deal we will have scenarios
+
+what evr the quote we create in backend the values in cq_quote and cq_quote_line they copy it into MDM tables,
+they are called cq_scenario and cq_scenario_line.so that quote become a scenario
+
+In muti-quote scenario only one should be published.so the main scenario will be we have to check this i.e.,
+
+Recommended Quote should be "true"
+published should be "published"
